@@ -17,7 +17,7 @@
     <option name="myElementSize" value="326" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -38,6 +38,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1pvjNEyFHWrb98oaGqVD8tqxYXh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="foldersAlwaysOnTop" value="false" />
     <option name="showExcludedFiles" value="true" />
@@ -229,7 +230,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616070416006</updated>
       <workItem from="1616070418499" duration="14353000" />
-      <workItem from="1616127562639" duration="3794000" />
+      <workItem from="1616127562639" duration="3807000" />
     </task>
     <servers />
   </component>

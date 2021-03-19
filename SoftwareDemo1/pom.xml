@@ -7,7 +7,7 @@
   <groupId>org.example</groupId>
   <artifactId>SoftwareDemo1</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <description>设计一个配置文件解析类Configuration</description>
+  <description>软件测试案例</description>
 
   <dependencies>
     <dependency>
