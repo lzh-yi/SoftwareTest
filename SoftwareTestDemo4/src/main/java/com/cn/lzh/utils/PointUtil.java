@@ -8,9 +8,10 @@ package com.cn.lzh.utils;
  */
 public class PointUtil {
 
-  public static int getPoint(int age, char sex, Boolean marriageStatus,int people) {
+  public static int getPoint(Integer age, char sex, Boolean marriageStatus,int people) {
 
     int point = 0;
+    assert age != null;
     assert age>1 && age<100;
     assert people>=0;
     assert sex =='F' || sex == 'M';
