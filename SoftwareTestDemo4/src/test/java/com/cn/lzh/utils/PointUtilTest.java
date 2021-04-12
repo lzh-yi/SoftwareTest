@@ -19,5 +19,6 @@ class PointUtilTest {
     Assertions.assertThrows(
       AssertionError.class,
       () -> PointUtil.getPoint(age, sex, marriageStatus, people));
+
   }
 }
