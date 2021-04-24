@@ -42,6 +42,22 @@ public class CustomerLinkedList<E> implements java.io.Serializable{
     return false;
   }
 
+  public void addFirst(E e) {
+    linkFirst(e);
+  }
+
+  private void linkFirst(E e) {
+    final Node<E> f = first;
+    final Node<E> newNode = new Node<>(null, e, f);
+    first = newNode;
+    if (f == null) {
+      last = newNode;
+    } else {
+      f.prev = newNode;
+    }
+    size++;
+  }
+
   E unlink(Node<E> x) {
     // assert x != null;
     final E element = x.item;
