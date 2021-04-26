@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.15.0" timestamp="2021-04-26T18:55:53.578">
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\exceptions\PremiumRateException.java">
+<violation beginline="10" endline="27" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="com.cn.lzh.exceptions" class="PremiumRateException" externalInfoUrl="https://pmd.github.io/pmd-6.15.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\utils\PointUtil.java">
+<violation beginline="37" endline="37" begincolumn="16" endcolumn="18" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.cn.lzh.utils" class="PointUtil" method="getPoint" externalInfoUrl="https://pmd.github.io/pmd-6.15.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="39" endline="39" begincolumn="23" endcolumn="25" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.cn.lzh.utils" class="PointUtil" method="getPoint" externalInfoUrl="https://pmd.github.io/pmd-6.15.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="49" endline="49" begincolumn="19" endcolumn="19" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.cn.lzh.utils" class="PointUtil" method="getPoint" externalInfoUrl="https://pmd.github.io/pmd-6.15.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\utils\PremiumRateUtil.java">
+<violation beginline="22" endline="22" begincolumn="25" endcolumn="26" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="com.cn.lzh.utils" class="PremiumRateUtil" method="getPremiumRate" externalInfoUrl="https://pmd.github.io/pmd-6.15.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+</file>
+</pmd>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.1">
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\PreminumCaculatorMain.java">
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\exceptions\PremiumRateException.java">
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\utils\PointUtil.java">
+<error line="27" column="27" severity="warning" message="Expression can be simplified." source="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck"/>
+<error line="27" column="53" severity="warning" message="Expression can be simplified." source="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck"/>
+<error line="43" column="24" severity="warning" message="Expression can be simplified." source="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck"/>
+<error line="45" column="31" severity="warning" message="Expression can be simplified." source="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck"/>
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\main\java\com\cn\lzh\utils\PremiumRateUtil.java">
+</file>
+</checkstyle>

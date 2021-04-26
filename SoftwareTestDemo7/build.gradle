@@ -1,0 +1,84 @@
+plugins {
+    id 'java'
+    // Apply the application plugin to add support for building a CLI application.
+    id 'application'
+
+    id 'checkstyle'
+    id 'pmd'
+    id 'com.github.spotbugs' version '4.0.5'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.0'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.0'
+
+
+}
+
+sourceSets {
+
+    mainClassName = 'com.cn.lzh.mai.Main'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
+
+// 配置 checkstyle
+checkstyle {
+    toolVersion '6.11.1'
+    showViolations true
+}
+check.dependsOn 'checkstyle'
+
+task checkstyle(type: Checkstyle) {
+    configFile file(
+            "${project.rootDir}/config/checkstyle/checkstyle.xml"
+    ) // Where my checkstyle config is...
+    configProperties.checkstyleSuppressionsPath = file(
+            "${project.rootDir}/config/checkstyle/suppressions.xml"
+    ).absolutePath // Where is my suppressions file for checkstyle is...
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+    classpath = files()
+}
+
+// 配置pmd
+task pmd(type: Pmd) {
+    ruleSetFiles = files("${project.rootDir}/config/pmd/pmd-ruleset.xml")
+    ignoreFailures = false
+    ruleSets = []
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+        xml {
+            destination file("$project.buildDir/reports/pmd/pmd.xml")
+        }
+        html {
+            destination file("$project.buildDir/reports/pmd/pmd.html")
+        }
+    }
+}

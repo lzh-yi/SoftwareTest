@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.1">
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\test\java\com\cn\lzh\PreminumCaculatorMainTest.java">
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\test\java\com\cn\lzh\utils\PointUtilTest.java">
+<error line="21" severity="warning" message="&apos;lambda arguments&apos; have incorrect indentation level 8, expected level should be 6." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="E:\SoftwareTest\SoftwareTestDemo7\src\test\java\com\cn\lzh\utils\PremiumRateUtilTest.java">
+</file>
+</checkstyle>
