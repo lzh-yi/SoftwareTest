@@ -27,7 +27,7 @@ import nl.tudelft.jpacman.sprite.Sprite;
  * </p>
  * <p>
  * <b>AI:</b> Clyde has two basic AIs, one for when he's far from Pac-Man, and
- * one for when he is near to Pac-Man. 
+ * one for when he is near to Pac-Man.
  * When Clyde is far away from Pac-Man (beyond eight grid spaces),
  * Clyde behaves very much like Blinky, trying to move to Pac-Man's exact
  * location. However, when Clyde gets within eight grid spaces of Pac-Man, he
@@ -83,7 +83,7 @@ public class Clyde extends Ghost {
      *
      * <p>
      * Clyde has two basic AIs, one for when he's far from Pac-Man, and one for
-     * when he is near to Pac-Man. 
+     * when he is near to Pac-Man.
      * When Clyde is far away from Pac-Man (beyond eight grid spaces),
      * Clyde behaves very much like Blinky, trying to move to Pac-Man's exact
      * location. However, when Clyde gets within eight grid spaces of Pac-Man,
@@ -94,6 +94,7 @@ public class Clyde extends Ghost {
     public Optional<Direction> nextAiMove() {
         assert hasSquare();
 
+        // 寻找离当前鬼魂最近的玩家
         Unit nearest = Navigation.findNearest(Player.class, getSquare());
         if (nearest == null) {
             return Optional.empty();
@@ -101,12 +102,15 @@ public class Clyde extends Ghost {
         assert nearest.hasSquare();
         Square target = nearest.getSquare();
 
+        // 获取鬼魂和离它最近的玩家之间的最短路径
         List<Direction> path = Navigation.shortestPath(getSquare(), target, this);
         if (path != null && !path.isEmpty()) {
             Direction direction = path.get(0);
-            if (path.size() <= SHYNESS) {
+            System.out.println(path.size());
+            if (path.size() <= SHYNESS) {   // 当鬼魂离玩家距离小于8的时候会自动远离玩家
                 return Optional.ofNullable(OPPOSITES.get(direction));
             }
+            // 当鬼魂离玩家距离大于8的时候会试图走到玩家位置
             return Optional.of(direction);
         }
         return Optional.empty();
