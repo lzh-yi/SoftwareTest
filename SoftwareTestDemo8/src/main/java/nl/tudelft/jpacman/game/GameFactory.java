@@ -7,7 +7,7 @@ import nl.tudelft.jpacman.points.PointCalculator;
 /**
  * Factory that provides Game objects.
  *
- * @author Jeroen Roosen 
+ * @author Jeroen Roosen
  */
 public class GameFactory {
 
